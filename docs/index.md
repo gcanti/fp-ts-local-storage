@@ -1,8 +1,9 @@
+---
+title: Home
+nav_order: 1
+---
+
 [fp-ts](https://github.com/gcanti/fp-ts) bindings for LocalStorage
-
-# Documentation
-
-- [API Reference](https://gcanti.github.io/fp-ts-local-storage)
 
 # Example
 
