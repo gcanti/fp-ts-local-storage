@@ -1,6 +1,6 @@
 {
   "name": "fp-ts-local-storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
     "lib"
@@ -27,7 +27,7 @@
     "url": "https://github.com/gcanti/fp-ts-local-storage/issues"
   },
   "homepage": "https://github.com/gcanti/fp-ts-local-storage",
-  "dependencies": {
+  "peerDependencies": {
     "fp-ts": "^1.0.0"
   },
   "devDependencies": {
@@ -42,7 +42,8 @@
     "ts-node": "3.3.0",
     "tslint": "^5.9.1",
     "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "fp-ts": "^1.0.0"
   },
   "tags": [
     "fp-ts",
