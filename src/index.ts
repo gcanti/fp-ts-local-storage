@@ -1,22 +1,44 @@
 import { IO } from 'fp-ts/lib/IO'
 import { fromNullable, Option } from 'fp-ts/lib/Option'
 
-export const clear: IO<void> = new IO(() => localStorage.clear())
+const _clear = () => localStorage.clear()
 
-export const getItem = (key: string): IO<Option<string>> => {
-  return new IO(() => fromNullable(localStorage.getItem(key)))
+/**
+ * @since 0.2.0
+ */
+export const clear: IO<void> = _clear
+
+/**
+ * @since 0.2.0
+ */
+export function getItem(key: string): IO<Option<string>> {
+  return () => fromNullable(localStorage.getItem(key))
 }
 
-export const key = (index: number): IO<Option<string>> => {
-  return new IO(() => fromNullable(localStorage.key(index)))
+/**
+ * @since 0.2.0
+ */
+export function key(index: number): IO<Option<string>> {
+  return () => fromNullable(localStorage.key(index))
 }
 
-export const length: IO<number> = new IO(() => localStorage.length)
+const _length = () => localStorage.length
 
-export const removeItem = (key: string): IO<void> => {
-  return new IO(() => localStorage.removeItem(key))
+/**
+ * @since 0.2.0
+ */
+export const length: IO<number> = _length
+
+/**
+ * @since 0.2.0
+ */
+export function removeItem(key: string): IO<void> {
+  return () => localStorage.removeItem(key)
 }
 
-export const setItem = (key: string, value: string): IO<void> => {
-  return new IO(() => localStorage.setItem(key, value))
+/**
+ * @since 0.2.0
+ */
+export function setItem(key: string, value: string): IO<void> {
+  return () => localStorage.setItem(key, value)
 }

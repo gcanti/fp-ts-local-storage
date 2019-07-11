@@ -1,6 +1,6 @@
 {
   "name": "fp-ts-local-storage",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
     "lib"
@@ -15,6 +15,7 @@
     "test": "npm run build && npm run prettier && npm run jest && npm run docs",
     "clean": "rimraf rm -rf lib/*",
     "build": "npm run clean && tsc",
+    "prepublish": "npm run build",
     "docs": "docs-ts"
   },
   "repository": {
@@ -28,22 +29,22 @@
   },
   "homepage": "https://github.com/gcanti/fp-ts-local-storage",
   "peerDependencies": {
-    "fp-ts": "^1.0.0"
+    "fp-ts": "^2.0.1"
   },
   "devDependencies": {
     "@types/jest": "^22.2.2",
     "@types/node": "8.0.19",
-    "docs-ts": "0.0.1",
+    "docs-ts": "^0.1.0",
     "dtslint": "^0.3.0",
-    "jest": "^22.4.3",
-    "prettier": "^1.13.4",
+    "fp-ts": "^2.0.1",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
     "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.2",
+    "ts-jest": "^24.0.2",
     "ts-node": "3.3.0",
     "tslint": "^5.9.1",
     "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.9.2",
-    "fp-ts": "^1.0.0"
+    "typescript": "^3.5.3"
   },
   "tags": [
     "fp-ts",
@@ -56,30 +57,5 @@
     "localstorage",
     "functional-programming",
     "typescript"
-  ],
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "skipBabel": true
-      }
-    },
-    "collectCoverage": true,
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "test",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "testPathIgnorePatterns": [],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 0
-      }
-    }
-  }
+  ]
 }
