@@ -25,6 +25,8 @@ parent: Modules
 export const clear: IO<void> = ...
 ```
 
+Added in v0.2.0
+
 # length (constant)
 
 **Signature**
@@ -33,34 +35,44 @@ export const clear: IO<void> = ...
 export const length: IO<number> = ...
 ```
 
+Added in v0.2.0
+
 # getItem (function)
 
 **Signature**
 
 ```ts
-export const getItem = (key: string): IO<Option<string>> => ...
+export function getItem(key: string): IO<Option<string>> { ... }
 ```
+
+Added in v0.2.0
 
 # key (function)
 
 **Signature**
 
 ```ts
-export const key = (index: number): IO<Option<string>> => ...
+export function key(index: number): IO<Option<string>> { ... }
 ```
+
+Added in v0.2.0
 
 # removeItem (function)
 
 **Signature**
 
 ```ts
-export const removeItem = (key: string): IO<void> => ...
+export function removeItem(key: string): IO<void> { ... }
 ```
+
+Added in v0.2.0
 
 # setItem (function)
 
 **Signature**
 
 ```ts
-export const setItem = (key: string, value: string): IO<void> => ...
+export function setItem(key: string, value: string): IO<void> { ... }
 ```
+
+Added in v0.2.0

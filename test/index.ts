@@ -37,7 +37,7 @@ describe('LocalStorage', () => {
     const original = g.localStorage
     const state = { a: 'foo' }
     g.localStorage = mockLocalStorage(state)
-    clear.run()
+    clear()
     assert.deepEqual(state, {})
     g.localStorage = original
   })
@@ -48,8 +48,8 @@ describe('LocalStorage', () => {
     g.localStorage = mockLocalStorage({
       a: 'foo'
     })
-    assert.deepEqual(getItem('a').run(), some('foo'))
-    assert.deepEqual(getItem('b').run(), none)
+    assert.deepEqual(getItem('a')(), some('foo'))
+    assert.deepEqual(getItem('b')(), none)
     g.localStorage = original
   })
 
@@ -59,8 +59,8 @@ describe('LocalStorage', () => {
     g.localStorage = mockLocalStorage({
       a: 'foo'
     })
-    assert.deepEqual(key(0).run(), some('a'))
-    assert.deepEqual(key(1).run(), none)
+    assert.deepEqual(key(0)(), some('a'))
+    assert.deepEqual(key(1)(), none)
     g.localStorage = original
   })
 
@@ -70,7 +70,7 @@ describe('LocalStorage', () => {
     g.localStorage = mockLocalStorage({
       a: 'foo'
     })
-    assert.deepEqual(length.run(), 1)
+    assert.deepEqual(length(), 1)
     g.localStorage = original
   })
 
@@ -79,7 +79,7 @@ describe('LocalStorage', () => {
     const original = g.localStorage
     const state = { a: 'foo' }
     g.localStorage = mockLocalStorage(state)
-    removeItem('a').run()
+    removeItem('a')()
     assert.deepEqual(state, {})
     g.localStorage = original
   })
@@ -89,7 +89,7 @@ describe('LocalStorage', () => {
     const original = g.localStorage
     const state = {}
     g.localStorage = mockLocalStorage(state)
-    setItem('a', 'foo').run()
+    setItem('a', 'foo')()
     assert.deepEqual(state, { a: 'foo' })
     g.localStorage = original
   })
