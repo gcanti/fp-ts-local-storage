@@ -3,18 +3,23 @@
   "version": "0.2.0",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
-    "lib"
+    "lib",
+    "es6"
   ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "lint": "tslint -p tsconfig.json src/**/*.ts test/**/*.ts",
-    "jest": "jest",
+    "check": "tsc -p .",
+    "lint": "tslint -p .",
+    "jest": "jest --ci --coverage",
     "prettier": "prettier --no-semi --single-quote --print-width 120 --parser typescript --list-different \"{src,test}/**/*.ts\"",
     "fix-prettier": "prettier --no-semi --single-quote --print-width 120 --parser typescript --write \"{src,test}/**/*.ts\"",
-    "test": "npm run build && npm run prettier && npm run jest && npm run docs",
-    "clean": "rimraf rm -rf lib/*",
-    "build": "npm run clean && tsc",
+    "pretest": "npm run check && npm run lint && npm run prettier",
+    "test": "npm run jest",
+    "posttest": "npm run docs",
+    "clean": "rm -rf ./lib ./es6",
+    "prebuild": "npm run clean",
+    "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json",
     "prepublish": "npm run build",
     "docs": "docs-ts"
   },
