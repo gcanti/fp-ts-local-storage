@@ -1,6 +1,6 @@
 {
   "name": "fp-ts-local-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
     "lib",
@@ -21,7 +21,8 @@
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json",
     "prepublish": "npm run build",
-    "docs": "docs-ts"
+    "docs": "docs-ts",
+    "postbuild": "import-path-rewrite"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "docs-ts": "^0.1.0",
     "dtslint": "^0.3.0",
     "fp-ts": "^2.0.1",
+    "import-path-rewrite": "github:gcanti/import-path-rewrite",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.2",
