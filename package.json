@@ -1,12 +1,13 @@
 {
   "name": "fp-ts-local-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
     "lib",
     "es6"
   ],
   "main": "lib/index.js",
+  "module": "es6/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "check": "tsc -p .",
