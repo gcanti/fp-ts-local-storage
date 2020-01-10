@@ -15,16 +15,6 @@
 
 # 1.0.2
 
-- **Bug Fix**
-  - add module field in package.json (@gcanti)
-
-# 1.0.1
-
-- **Bug Fix**
-  - rewrite es6 imports (@gcanti)
-
-# 1.0.0
-
 - **New Feature**
   - add build in ES6 format, #3 (@StefanoMagrassi)
 
