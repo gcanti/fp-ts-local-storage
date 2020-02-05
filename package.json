@@ -1,6 +1,6 @@
 {
   "name": "fp-ts-local-storage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "fp-ts bindings for LocalStorage",
   "files": [
     "lib",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/jest": "^22.2.2",
     "@types/node": "8.0.19",
-    "docs-ts": "^0.1.0",
+    "docs-ts": "^0.3.4",
     "dtslint": "^0.3.0",
     "fp-ts": "^2.0.1",
     "import-path-rewrite": "github:gcanti/import-path-rewrite",

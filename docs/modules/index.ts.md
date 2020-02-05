@@ -4,20 +4,24 @@ nav_order: 1
 parent: Modules
 ---
 
+# index overview
+
+Added in v0.2.0
+
 ---
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [clear (constant)](#clear-constant)
-- [length (constant)](#length-constant)
-- [getItem (function)](#getitem-function)
-- [key (function)](#key-function)
-- [removeItem (function)](#removeitem-function)
-- [setItem (function)](#setitem-function)
+- [clear](#clear)
+- [getItem](#getitem)
+- [key](#key)
+- [length](#length)
+- [removeItem](#removeitem)
+- [setItem](#setitem)
 
 ---
 
-# clear (constant)
+# clear
 
 **Signature**
 
@@ -27,17 +31,7 @@ export const clear: IO<void> = ...
 
 Added in v0.2.0
 
-# length (constant)
-
-**Signature**
-
-```ts
-export const length: IO<number> = ...
-```
-
-Added in v0.2.0
-
-# getItem (function)
+# getItem
 
 **Signature**
 
@@ -47,7 +41,7 @@ export function getItem(key: string): IO<Option<string>> { ... }
 
 Added in v0.2.0
 
-# key (function)
+# key
 
 **Signature**
 
@@ -57,7 +51,17 @@ export function key(index: number): IO<Option<string>> { ... }
 
 Added in v0.2.0
 
-# removeItem (function)
+# length
+
+**Signature**
+
+```ts
+export const length: IO<number> = ...
+```
+
+Added in v0.2.0
+
+# removeItem
 
 **Signature**
 
@@ -67,7 +71,7 @@ export function removeItem(key: string): IO<void> { ... }
 
 Added in v0.2.0
 
-# setItem (function)
+# setItem
 
 **Signature**
 

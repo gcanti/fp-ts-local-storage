@@ -1,3 +1,6 @@
+/**
+ * @since 0.2.0
+ */
 import { IO } from 'fp-ts/lib/IO'
 import { fromNullable, Option } from 'fp-ts/lib/Option'
 
