@@ -6,9 +6,9 @@
  * ```ts
  * import * as assert from 'assert'
  * import { setItem, getItem } from 'fp-ts-local-storage'
- * import { some } from 'fp-ts/lib/Option'
- * import { pipe } from 'fp-ts/lib/pipeable'
- * import { chain } from 'fp-ts/lib/IO'
+ * import { some } from 'fp-ts/Option'
+ * import { pipe } from 'fp-ts/pipeable'
+ * import { chain } from 'fp-ts/IO'
  *
  * // const program: IO<Option<string>>
  * const program = pipe(
@@ -23,9 +23,9 @@
  *
  * ```ts
  * import { setItem, getItem } from 'fp-ts-local-storage'
- * import { chain, tryCatch } from 'fp-ts/lib/IOEither'
- * import { pipe } from 'fp-ts/lib/pipeable'
- * import { toError } from 'fp-ts/lib/Either'
+ * import { chain, tryCatch } from 'fp-ts/IOEither'
+ * import { pipe } from 'fp-ts/pipeable'
+ * import { toError } from 'fp-ts/Either'
  *
  * // const program: IOEither<Error, Option<string>>
  * const program = pipe(
